@@ -8,31 +8,27 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="margin-top: 20px;">Gerenciamento de Presença - CorpTech</h1>
+        <h1>Gerenciamento de Presença - CorpTech</h1>
+        <div class="section1">
+            <input type="text" id="buscarColaborador" placeholder="Digite o nome do colaborador...">
+            <div id="inputs">
+                <button id="registrarPresenca">Registrar Presença</button>
+                <button id="limparBusca">Limpar Busca</button>
+            </div>
+        </div>
 
-        <!-- Registrar Presença -->
-        <div class="section">
-            <h2>Registrar Presença</h2>
-            <button id="registrarPresenca">Registrar Presença</button>
+        <div class="msg">
             <p id="registro"></p>
         </div>
 
-        <!-- Buscar Colaborador -->
-        <div class="section">
-            <h2>Buscar Colaborador</h2>
-            <input type="text" id="buscarColaborador" placeholder="Digite o nome do colaborador...">
-            <button id="limparBusca">Limpar Busca</button>
-            <ul id="listaColaboradores"></ul>
-        </div>
+        <ul id="listaColaboradores"></ul>
 
-        <!-- Adicionar Novo Colaborador -->
         <div class="section">
-            <h2>Adicionar Novo Colaborador</h2>
+            <h4>Adicionar Novo Colaborador</h4>
             <input type="text" id="novoColaborador" placeholder="Nome do novo colaborador">
             <button id="adicionarColaborador">Adicionar</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

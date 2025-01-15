@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
         { nome: 'Ana Costa', ultimaPresenca: null }
     ];
 
-    // Registrar Presença
     const registrarPresencaBtn = document.getElementById('registrarPresenca');
     const registroMsg = document.getElementById('registro');
     const buscarColaboradorInput = document.getElementById('buscarColaborador');
@@ -27,19 +26,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Buscar Colaborador
     buscarColaboradorInput.addEventListener('input', function () {
         atualizarListaColaboradores(this.value);
     });
 
-    // Limpar Busca
     const limparBuscaBtn = document.getElementById('limparBusca');
     limparBuscaBtn.addEventListener('click', function () {
         buscarColaboradorInput.value = '';
+        registroMsg.textContent = '';
         atualizarListaColaboradores();
     });
 
-    // Adicionar Novo Colaborador
     const novoColaboradorInput = document.getElementById('novoColaborador');
     const adicionarColaboradorBtn = document.getElementById('adicionarColaborador');
 
@@ -52,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Atualizar Lista de Colaboradores
     function atualizarListaColaboradores(filtro = '') {
         listaColaboradores.innerHTML = '';
         const colaboradoresFiltrados = colaboradores.filter(colab =>
@@ -62,27 +58,23 @@ document.addEventListener('DOMContentLoaded', function () {
         colaboradoresFiltrados.forEach(colab => {
             const li = document.createElement('li');
             
-            // Cria um container para o nome e a última presença
             const nomeSpan = document.createElement('span');
             nomeSpan.textContent = colab.nome;
     
             const presencaSpan = document.createElement('span');
             presencaSpan.textContent = `Última presença: ${colab.ultimaPresenca || 'Nenhum registro'}`;
     
-            // Adiciona os spans ao li
             li.appendChild(nomeSpan);
             li.appendChild(presencaSpan);
     
-            // Adiciona um evento de clique ao item da lista
             li.addEventListener('click', function () {
-                buscarColaboradorInput.value = colab.nome; // Preenche o campo de busca com o nome clicado
-                listaColaboradores.innerHTML = ''; // Oculta a lista de sugestões após o clique
+                buscarColaboradorInput.value = colab.nome;
+                listaColaboradores.innerHTML = '';
             });
     
             listaColaboradores.appendChild(li);
         });
     }
 
-    // Inicializar lista de colaboradores
     atualizarListaColaboradores();
 });

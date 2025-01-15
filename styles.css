@@ -11,13 +11,31 @@ body {
 }
 
 .container {
+    display: flex;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 1200px;
+    width: 70%;
+    max-width: 1100px;
     margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+#inputs{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -26,8 +44,29 @@ h1 {
     margin-top: 20px;
 }
 
+h2{
+    margin:10px;
+}
+
+h4{
+    text-align: center;
+    margin: 0px;
+    align-items: center;
+}
+
 .section {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 60px 0px 60px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 125px;
 }
 
 button {
@@ -45,6 +84,7 @@ button:hover {
 }
 
 input[type="text"] {
+    text-align: center;
     width: calc(100% - 22px);
     padding: 10px;
     margin: 5px 0;
@@ -55,12 +95,11 @@ input[type="text"] {
 ul {
     list-style-type: none;
     padding: 0;
-    width: 100%;
     max-height: 300px;
     overflow-y: auto;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px 40px;
 }
 
 ul li {
@@ -68,9 +107,9 @@ ul li {
     border-bottom: 1px solid #ccc;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: flex; /* Ativa o Flexbox */
-    justify-content: space-between; /* Distribui o espaço entre os elementos */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul li:last-child {
@@ -82,6 +121,6 @@ ul li:hover {
 }
 
 ul li span:last-child {
-    text-align: right; /* Alinha o texto da última presença à direita */
-    color: #666; /* Cor mais suave para a informação da presença */
+    text-align: right;
+    color: #666;
 }
