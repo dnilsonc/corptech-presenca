@@ -3,7 +3,6 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     padding-top: 20px;
@@ -18,7 +17,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 70%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0px 0px 0px 0px;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
@@ -95,7 +94,8 @@ input[type="text"] {
 ul {
     list-style-type: none;
     padding: 0;
-    max-height: 300px;
+    min-height: 210px;
+    max-height: 210px;
     overflow-y: auto;
     border: 1px solid #ccc;
     border-radius: 5px;
