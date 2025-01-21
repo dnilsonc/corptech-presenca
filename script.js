@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { nome: 'João Silva', ultimaPresenca: null },
         { nome: 'Maria Oliveira', ultimaPresenca: null },
         { nome: 'Carlos Souza', ultimaPresenca: null },
-        { nome: 'Ana Costa', ultimaPresenca: null }
+        { nome: 'Ana Costa', ultimaPresenca: null },
+        {nome: 'Pedro Henrique', ultimaPresenca: null},
     ];
 
     const registrarPresencaBtn = document.getElementById('registrarPresenca');
